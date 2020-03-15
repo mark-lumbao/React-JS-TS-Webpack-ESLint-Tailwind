@@ -14,4 +14,4 @@
   <li>npm run build: Builds your project to /dist folder</li>
   <li>npm run lint or lint-fix: For running eslint lint-fix enables you to fix fixable problems.</li>
 </ul>
-<h2>NOTE: Please configure tailwind yourself. The default build size will obviously be large so follow tailwind's <a href="https://tailwindcss.com/docs/controlling-file-size"i>nstructions</a> on how to manage it.</h2>
+<h3>NOTE: Please configure tailwind yourself. The default build size will obviously be large so follow tailwind's <a href="https://tailwindcss.com/docs/controlling-file-size"i>instructions</a> on how to manage it.</h3>
