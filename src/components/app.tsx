@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 const App = (): JSX.Element => (
   <div className="flex h-screen items-center justify-center">
@@ -7,7 +7,12 @@ const App = (): JSX.Element => (
       <br />
       your Project and
       <br />
-      <a className="text-sm text-gray-500 underline capitalize" href="https://github.com/doldol999">Follow me on my github account!</a>
+      <a
+        className="text-sm text-gray-500 underline capitalize"
+        href="https://github.com/doldol999"
+      >
+        Follow me on my github account!
+      </a>
     </h1>
   </div>
 );

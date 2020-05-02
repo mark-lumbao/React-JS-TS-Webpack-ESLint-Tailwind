@@ -1,4 +1,4 @@
-const { join } = require('path');
+const { join, resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -11,6 +11,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.ts', '.tsx', '.jsx'],
+    modules: [
+      'node_modules',
+      resolve(__dirname, 'src'),
+    ],
   },
   module: {
     rules: [
@@ -31,6 +35,10 @@ module.exports = {
         enforce: 'pre',
       },
       {
+        test: /\.js$/,
+        use: ['babel-loader'],
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'postcss-loader'],
       },
@@ -46,10 +54,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/public/index.html',
     }),
-    new CleanWebpackPlugin(),
   ],
   devServer: {
     overlay: true,
